@@ -1,3 +1,4 @@
+String name;
 int stage;
 int hue;
 String[] names1= {
@@ -27,16 +28,19 @@ void draw() {
     text("Hey Who R U?", width/2, 100);
     for (int i=0; i<names1.length; i++) {
       text(names1[i], i*150+175, 200);
-      }
-      for(int i=0; i<names2.length; i++){
-       text(names2[i], i*150+175, 250);      
-      }
     }
-    if (stage==2) {
-      background(100);
-      ellipse(width/2, 2*height/3, 100, 100);
-      text("Wow. That was kind of rude.", width/2, 200);
+    for (int i=0; i<names2.length; i++) {
+      text(names2[i], i*150+175, 250);
     }
+  }
+  if (name=="Antoine") {
+    text("HEEEEEEY IT WORKS HOE!!!", width/2, height/2);
+  }
+  if (stage==2) {
+    background(100);
+    ellipse(width/2, 2*height/3, 100, 100);
+    text("Wow. That was kind of rude.", width/2, 200);
+  }
   if (stage==3) {
     background(100);
     ellipse(width/2, 2*height/3, 100, 100);
@@ -108,6 +112,23 @@ void mousePressed() {
   if (mouseX>width/2-50 && mouseX<width/2+50 && mouseY>2*height/3-50 && mouseY<2*height/3+50) {
     hue+=15;
     stage+=1;
+  }
+  //names screen clickeys
+  if (stage==1) {
+    //Antoine
+    if (mouseX > 65 && mouseX < 238 && mouseY > 150 && mouseY < 250) {
+      name="Antoine";
+    }
+    //Adel
+    if (mouseX > 238 && mouseX < 413 && mouseY > 150 && mouseY < 250) {
+      name="Adel";
+    }
+    if (mouseX > 413 && mouseX < 588 && mouseY > 150 && mouseY < 250) {
+      name="Hannah";
+    }
+    if (mouseX > 588 && mouseX < 763 && mouseY > 150 && mouseY < 250) {
+      name="Zahra";
+    }
   }
 }
 
