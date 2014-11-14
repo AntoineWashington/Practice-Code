@@ -34,8 +34,18 @@ void draw() {
     }
   }
   if (name=="Antoine") {
-    text("HEEEEEEY IT WORKS HOE!!!", width/2, height/2);
+    text("HEEEEEEY IT WORKS!!!", width/2, height/2);
   }
+  if (name=="Adel") {
+    text("Are you Adel?", width/2, height/2);
+  }
+  if (name=="Hannah") {
+    text("Are you Hannah?", width/2, height/2);
+  }
+  if (name=="Zahra") {
+    text("Are you Zahra?", width/2, height/2);
+  }
+
   if (stage==2) {
     background(100);
     ellipse(width/2, 2*height/3, 100, 100);
@@ -116,17 +126,17 @@ void mousePressed() {
   //names screen clickeys
   if (stage==1) {
     //Antoine
-    if (mouseX > 65 && mouseX < 238 && mouseY > 150 && mouseY < 250) {
+    if (mouseX > 65 && mouseX < 238 && mouseY > 175 && mouseY < 225) {
       name="Antoine";
     }
     //Adel
-    if (mouseX > 238 && mouseX < 413 && mouseY > 150 && mouseY < 250) {
+    if (mouseX > 238 && mouseX < 413 && mouseY > 175 && mouseY < 225) {
       name="Adel";
     }
-    if (mouseX > 413 && mouseX < 588 && mouseY > 150 && mouseY < 250) {
+    if (mouseX > 413 && mouseX < 588 && mouseY > 175 && mouseY < 225) {
       name="Hannah";
     }
-    if (mouseX > 588 && mouseX < 763 && mouseY > 150 && mouseY < 250) {
+    if (mouseX > 588 && mouseX < 763 && mouseY > 175 && mouseY < 225) {
       name="Zahra";
     }
   }
