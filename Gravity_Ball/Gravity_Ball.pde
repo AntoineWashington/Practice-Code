@@ -39,7 +39,7 @@ void draw() {
 
   if (locy+sz/2>height) {
     locy=height-sz/2;
-    vely*=-1;
+    vely*=-.9;
   }
 }
 
