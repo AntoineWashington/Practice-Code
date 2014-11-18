@@ -1,6 +1,7 @@
 String name;
 int stage;
 int hue;
+int w, h;
 String[] names1= {
   "Antoine", "Adel", "Hannah", "Zahra"
 };
@@ -17,6 +18,8 @@ void setup() {
   noStroke();
   textAlign(CENTER);
   rectMode(CENTER);
+  w=width/2;
+  h=height/2;
 }
 
 void draw() {
@@ -92,6 +95,9 @@ void draw() {
     fill(0);
     text("HOME", 50, 50);
     fill(hue, 100, 100, 100);
+    if (stage>1) {
+      ellipse(width/2, 2*height/3, 100, 100);
+    }
     if (stage==1) {
       text("Are you Hannah?", width/2, height/2);
       rect(width/2, 2*height/3, 300, 100);
@@ -104,6 +110,16 @@ void draw() {
       fill(hue, 100, 100, 100);
     }
     if (stage==2) {
+      text("Hiii Hannah!", w, h);
+    }
+    if (stage==3) {
+     text("Hey. how's it goin'", w, h); 
+    }
+    if (stage==4){
+     text("This took frustratingly long", w, h); 
+    }
+    if (stage==5){
+     text("And this is like one of the first conversations that I programmed", w, h); 
     }
   }
   if (name=="Zahra") {
@@ -357,3 +373,4 @@ void mousePressed() {
     }
   }
 }
+
