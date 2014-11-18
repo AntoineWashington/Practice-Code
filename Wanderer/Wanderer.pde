@@ -15,10 +15,11 @@ void setup() {
   sz=50;
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
+  background(100);
 }
 
 void draw() {
-  background(100);
+  
   fill(hue, 100, 100, 75);
   hue+=1;
   if (hue>359) {
