@@ -1,30 +1,42 @@
-PVector loc; //locations
-PVector vel; //velocities
-PVector acc; //accelerations
+PVector loc, loc2; //locations
+PVector vel, vel2; //velocities
+PVector acc, acc2; //accelerations
+PVector mouse;
 int hue;
 int sz;
+int sz2;
 void setup() {
   size(800, 600);
-  loc = new PVector(width/2, height/2);
-  vel =  PVector.random2D();
+  loc = new PVector(width/3, height/3);
+  vel = new PVector(10, 10);
   acc = new PVector(random(-2, 2), random(-2, 2));
+
+  loc = new PVector(2*width/3, 2*height/3);
+  vel = new PVector(-10, -10);
+  acc = new PVector(random(-2, 2), random(-2, 2));
+
+  mouse = new PVector();
   sz=100;
-  sz=50;
+  sz2=50;
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
 }
 
 void draw() {
   background(100);
-  acc.set(random(-2, 2), random(-2, 2));
+  mouse.set(mouseX, mouseY);
+
+
+//  if ((loc.dist(loc2)) < sz+sz) {
+//    vel.mult(-1);
+//    vel2.mult(-1);
+//  }
+  acc.set(0, 0);
   vel.add(acc);
   loc.add(vel);
-  if (dist(mouseX, mouseY, loc.x, loc.y) > sz) {
-    vel.set(0,0);
-  } else {
-    fill(255);
-  }
+
   circle(loc.x, loc.y, sz);
+  circle(loc2.x, loc2.y, sz2);
 
   if (loc.x + sz > width || loc.x - sz < 0) {
     vel.x*=-1;
@@ -37,6 +49,7 @@ void draw() {
     hue=1;
   }
 }
+
 
 void circle(float x, float y, float r) {
   ellipse(x, y, 2*r, 2*r);

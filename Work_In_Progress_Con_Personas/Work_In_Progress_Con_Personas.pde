@@ -113,13 +113,25 @@ void draw() {
       text("Hiii Hannah!", w, h);
     }
     if (stage==3) {
-     text("Hey. how's it goin'", w, h); 
+      text("Hey. how's it goin'", w, h);
     }
-    if (stage==4){
-     text("This took frustratingly long", w, h); 
+    if (stage==4) {
+      text("This took frustratingly long", w, h);
     }
-    if (stage==5){
-     text("And this is like one of the first conversations that I programmed", w, h); 
+    if (stage==5) {
+      text("And this is like one of the first conversations that I programmed", w, h);
+    }
+    if (stage==6) {
+      text("So yeah I'm not really sure what to talk about", w, h);
+    }
+    if (stage==7) {
+      text("Like, I'm starting to doubt the importance/purpose of this entire program", w, h);
+    }
+    if (stage==8) {
+      text("But hey", w, h);
+    }
+    if (stage==9) {
+      text("Admittin' is the first step", w, h);
     }
   }
   if (name=="Zahra") {
@@ -130,7 +142,7 @@ void draw() {
     text("HOME", 50, 50);
     fill(hue, 100, 100, 100);
     if (stage==1) {
-      text("Are you Zahra?", width/2, height/2);
+      text("Are you Texas?", width/2, height/2);
       rect(width/2, 2*height/3, 300, 100);
       stroke(0);
       line(width/2, 350, width/2, 450);
