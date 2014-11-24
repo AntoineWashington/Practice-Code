@@ -1,4 +1,4 @@
-int count = 300;
+int count = 200;
 PVector[] x= new PVector[count];
 PVector[] v= new PVector[count];
 PVector[] a= new PVector[count];
@@ -19,7 +19,7 @@ void setup() {
 }
 
 void draw() {
-  background(360);
+  background(100);
   for (int i=0; i<count; i++) {
 
     hue[i] = x[i].x/2.22;
