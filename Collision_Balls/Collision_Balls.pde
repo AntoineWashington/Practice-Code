@@ -1,4 +1,4 @@
-int count = 200;
+int count = 1250;
 PVector[] x= new PVector[count];
 PVector[] v= new PVector[count];
 PVector[] a= new PVector[count];
@@ -23,8 +23,8 @@ void draw() {
   for (int i=0; i<count; i++) {
 
     hue[i] = x[i].x/2.22;
-    trans[i] = x[i].y/6;
-    fill(hue[i], 100, 100, trans[i]);
+//    trans[i] = x[i].y/6;
+    fill(hue[i], 100, 100, 100);
 
     v[i].add(a[i]);
     x[i].add(v[i]);
