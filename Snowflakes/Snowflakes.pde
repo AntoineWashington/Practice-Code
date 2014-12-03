@@ -12,7 +12,7 @@ void setup() {
     sz[i] = random(1, 3);
     x[i] = new PVector(random(width), random(-height, -sz[i]/2));
     v[i] = new PVector(random(-.01, .01), random(1, 2));
-    a[i] = new PVector(0, 0);
+    a[i] = new PVector(0, .01);
   }
   noStroke();
 }
@@ -20,7 +20,7 @@ void setup() {
 void draw() {
   background(0);
   for (int i=0; i<count; i++) {
-    a[i].set(random(-.01,.01),0);
+    a[i].set(random(-.01,.01),.001);
     v[i].add(a[i]);
     x[i].add(v[i]);
 
