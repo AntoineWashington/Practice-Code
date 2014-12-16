@@ -1,4 +1,4 @@
-int count = 1250;
+int count = 500;
 PVector[] x= new PVector[count];
 PVector[] v= new PVector[count];
 PVector[] a= new PVector[count];

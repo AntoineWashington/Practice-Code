@@ -42,7 +42,6 @@ class gravball {
   }
 
   void move() {
-
     vel.add(acc);
     loc.add(vel);
   }
