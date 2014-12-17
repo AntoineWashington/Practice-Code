@@ -22,6 +22,7 @@ void draw() {
     thisone.display();
     thisone.move();
     thisone.bounce();
+    thisone.flee();
     //    for (int j=0; j < balls.size (); j++) {
     //      if (i!=j) {
     //        thisone.bounceballs(balls.get(j));
