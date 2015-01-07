@@ -20,7 +20,7 @@ class ball {
   ////////////////////////
   void display() {
     // stroke(frameCount%360, 100, 100, life);            //stroke and fill will change as frames go by and
-    fill(frameCount%360, 100, 100, life);              //transparency will be dependent on the life variable 
+    fill(200, 100, 100, life);              //transparency will be dependent on the life variable 
     ellipse(loc.x, loc.y, sz, sz);
   }
   ////////////////////////

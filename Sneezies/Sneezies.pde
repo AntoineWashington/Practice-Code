@@ -6,6 +6,7 @@ void setup(){
  for(int i=0; i < sneezies.length; i++){
   sneezies[i] = new ball();
  }
+ colorMode(HSB, 360, 100, 100, 100);
 }
 void draw(){
   mouse = new PVector(mouseX, mouseY);
