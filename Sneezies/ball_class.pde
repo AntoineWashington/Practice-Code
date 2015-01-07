@@ -8,7 +8,7 @@ class ball {
   //////////////////////////  
   ball() {
     //intialize movement and size variables
-    sz = random(3, 5);                                 //gives ball a random size between 3 and 5 pixels
+    sz = random(20, 35);                                 //gives ball a random size between 3 and 5 pixels
     loc = new PVector(random(width-sz/2), random(height-sz/2));                 //starts balls at current mouse position
     vel = new PVector(random(-2, 2), random(-2, 2));   //sets random velocity
     acc = new PVector(0, 0);                           //acceleration equals zero
@@ -24,10 +24,16 @@ class ball {
     ellipse(loc.x, loc.y, sz, sz);
   }
   ////////////////////////
-  void esplode() {
-    if (clicked) {
-      sneezieesplosion.display();
-      sneezieesplosion.scatter();
+//  void esplode() {
+//    if (clicked) {
+//      sneezieesplosion.display();
+//      sneezieesplosion.scatter();
+//    }
+//  }
+  ////////////////////////
+  void pop(PVector mices){
+      if (loc.dist(mices) < sz/2 && mousePressed){
+       println("blakbsdfkbsadklb");
     }
   }
   ////////////////////////

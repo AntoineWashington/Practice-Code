@@ -17,6 +17,7 @@ class ball {
     acc = new PVector(0, 0);
   }
   void display() {
+    stroke(0);
     fill(frameCount%360, 100, 100, mouseY*.1667);
     ellipse(loc.x, loc.y, sz, sz);
   }
