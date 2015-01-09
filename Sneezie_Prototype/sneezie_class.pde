@@ -11,14 +11,14 @@ class sneezie {
  PVector mouse;
  
  void sneezie(){
-   r = 20;
-   loc = new PVector(57,35);
+   r = 20.;
+   loc = new PVector(random(width),random(height));
    vel = new PVector(random(-.4,.4),random(-.4,.4));
    acc = new PVector(0,0);
  }
  ////////////////////
  void display(){
-   ellipse(frameCount*1.33, frameCount, 2*7, 2*6);
+   ellipse(loc.x, loc.y, 2*r, 2*r);
  }
  ////////////////////
  void move(){
