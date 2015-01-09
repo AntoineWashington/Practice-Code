@@ -1,4 +1,4 @@
-ArrayList<esplosion> esplosions = new ArrayList<esplosion>();
+ArrayList<ball> esplosions = new ArrayList<ball>();
 int maxBalls=250;
 void setup() {
   size(800, 600);
@@ -9,10 +9,18 @@ void draw() {
  background(0, 0, 25, 100);
 
   if (mousePressed) {
-    if (balls.size () <= maxBalls) {
-      balls.add(new ball());
-    } else {
-      balls.remove(0);
+    if (esplosions.size () <= maxBalls) {
+      esplosions.add(new  ball());
+    }
+  }
+  
+  for(int i=0; i<esplosions.size(); i++){
+    ball thisone = esplosions.get(i);
+    thisone.display();
+    thisone.move();
+    thisone.age();
+    if(thisone.dead()){
+      esplosions.remove(i);
     }
   }
 }
